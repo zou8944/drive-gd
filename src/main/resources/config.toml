@@ -1,0 +1,16 @@
+# 需要备份的目录
+candidates = [
+    "/home/floyd",
+    "/home/floyd/PersonalCode",
+    "/home/floyd/Postman",
+    "/home/floyd/Software",
+    "/home/floyd/WorkCode",
+    "/home/floyd/Documents",
+    "/home/floyd/Videos",
+    "/home/floyd/Downloads",
+    "/home/floyd/Pictures",
+]
+
+# 阿里云API帐号
+accessKeyId = "xxx"
+accessKeySecret = "xxx"
