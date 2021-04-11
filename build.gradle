@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.4.30'
+}
+
+group 'com.github.zou8944'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url "https://maven.aliyun.com/repository/public" }
+    maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+    maven { url "https://maven.aliyun.com/repository/spring" }
+    maven { url "https://maven.aliyun.com/repository/spring-plugin" }
+    jcenter()
+    mavenCentral()
+}
+
+def koin_version = "2.2.2"
+
+dependencies {
+    // kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2"
+    // netty
+    implementation "io.netty:netty-all:4.1.20.Final"
+    // koin
+    compile "org.koin:koin-core:$koin_version"
+    // toml
+    implementation "com.moandjiezana.toml:toml4j:0.7.2"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    testCompile "org.koin:koin-test:$koin_version"
+}
+
+test {
+    useJUnitPlatform()
+}
